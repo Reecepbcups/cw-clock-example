@@ -1,0 +1,2 @@
+05dabfbad6aca27bbc0a432a853ff3d63dd0ac0b81fea6353314c84170db237c  ./target/wasm32-unknown-unknown/release/cw_ibc_example.wasm
+e2beb4c67de94b833c9223b9c6614e098352281b3d41e2d96f6b87e5ff0df34d  ./target/wasm32-unknown-unknown/release/cwmodules_example.wasm
