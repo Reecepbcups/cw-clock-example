@@ -10,8 +10,7 @@ pub enum ExecuteMsg {
 
 // sudo msg
 #[cw_serde]
-pub enum SudoMsg {
-    JunoBeginBlock { },
+pub enum SudoMsg {    
     JunoEndBlock { },
 }
 

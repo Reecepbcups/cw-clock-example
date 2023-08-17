@@ -1,13 +1,13 @@
 #[cfg(not(feature = "library"))]
 use cosmwasm_std::entry_point;
 use cosmwasm_std::{
-    to_binary, Binary, Deps, DepsMut, Env, IbcMsg, IbcTimeout, MessageInfo, Response, StdError,
+    to_binary, Binary, Deps, DepsMut, Env, MessageInfo, Response,
     StdResult,
 };
 use cw2::set_contract_version;
 
 use crate::error::ContractError;
-use crate::msg::{ExecuteMsg, GetCountResponse, InstantiateMsg, QueryMsg, SudoMsg};
+use crate::msg::{ExecuteMsg, InstantiateMsg, QueryMsg, SudoMsg};
 use crate::state::{Config, CONFIG};
 
 const CONTRACT_NAME: &str = "crates.io:cw-ibc-example";
@@ -47,18 +47,7 @@ pub fn execute(
 #[cfg_attr(not(feature = "library"), entry_point)]
 pub fn sudo(deps: DepsMut, _env: Env, msg: SudoMsg) -> Result<Response, ContractError> {
     match msg {        
-        SudoMsg::JunoBeginBlock { } => {
-
-            // load config, the increase +1
-            let mut config = CONFIG.load(deps.storage)?;
-            config.val -=1;
-            CONFIG.save(deps.storage, &config)?;
-
-            Ok(Response::new())
-        }
         SudoMsg::JunoEndBlock { } => {
-
-            // load config, the increase +1
             let mut config = CONFIG.load(deps.storage)?;
             config.val += 1;
             CONFIG.save(deps.storage, &config)?;

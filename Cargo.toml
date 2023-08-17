@@ -1,5 +1,5 @@
 [package]
-name = "cwmodules-example"
+name = "clock-example"
 version = "0.1.0"
 authors = ["Reece W <reecepbcups@gmail.com>"]
 edition = "2021"
