@@ -11,7 +11,7 @@ pub enum ExecuteMsg {
 // sudo msg
 #[cw_serde]
 pub enum SudoMsg {    
-    JunoEndBlock { },
+    EndBlock { },
 }
 
 #[cw_serde]
