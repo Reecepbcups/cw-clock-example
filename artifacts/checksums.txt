@@ -1,1 +1,1 @@
-37c3e212066b53d3271eef5bb195da7ae90fd561f22e3b3d7cd53b242ba24e02  clock_example.wasm
+c840df15067463fafaf2dd62705123b504a75d95742abac7b82a0952cf3bbcda  clock_example.wasm

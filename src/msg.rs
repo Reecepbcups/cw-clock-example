@@ -5,20 +5,20 @@ pub struct InstantiateMsg {}
 
 #[cw_serde]
 pub enum ExecuteMsg {
-    // Increment { },
+    Increment {},
 }
 
 // sudo msg
 #[cw_serde]
-pub enum SudoMsg {    
-    ClockEndBlock { },
+pub enum SudoMsg {
+    ClockEndBlock {},
 }
 
 #[cw_serde]
 #[derive(QueryResponses)]
 pub enum QueryMsg {
     #[returns(crate::state::Config)]
-    GetConfig { },
+    GetConfig {},
 }
 
 // We define a custom struct for each query response
